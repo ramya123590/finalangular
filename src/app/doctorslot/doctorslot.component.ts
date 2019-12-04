@@ -27,6 +27,7 @@ export class DoctorslotComponent{
     console.log(this.sharedService.doctor)
     this.doctorService.findBybranchandspec(this.sharedService.doctor).pipe(finalize(()=>{for (const val of this.doc) {
       console.log(val.lastName);
+      this.sharedService.doctor.fee=val.fee;
       
     }})).subscribe(data=>{this.doc=data})
   }

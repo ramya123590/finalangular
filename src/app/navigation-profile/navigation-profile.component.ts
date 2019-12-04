@@ -4,10 +4,12 @@ import { Patientregistration } from '../model/patientregistration';
 import { PatientregistrationserviceService } from '../service/patientregistrationservice.service';
 import { loginUser } from '../model/loginUser';
 
+
 @Component({
   selector: 'app-navigation-profile',
   templateUrl: './navigation-profile.component.html',
-  styleUrls: ['./navigation-profile.component.css']
+  styleUrls: ['./navigation-profile.component.css'],
+  
 })
 export class NavigationProfileComponent implements OnInit {
 

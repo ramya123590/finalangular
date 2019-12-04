@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FeedbackService {
 
-  private baseUrl ='http://localhost:9080/api/feedbacks';
+  private baseUrl ='http://localhost:1234/api/feedbacks';
 
   constructor(private http: HttpClient) { }
 
@@ -15,7 +15,7 @@ export class FeedbackService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createfeedback(feedback: Object): Observable<Object> {
+  createFeedback(feedback: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}`, feedback);
   }
 

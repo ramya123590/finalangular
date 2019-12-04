@@ -1,3 +1,3 @@
-export class Contact {
-    constructor( public feedbackMessage:string,  public rate:number, public userMail:string){}
+export class Feedback {
+    constructor(public name:string, public feedbackMessage:string,  public experience:String){}
 }

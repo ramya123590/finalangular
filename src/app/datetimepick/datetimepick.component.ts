@@ -46,6 +46,7 @@ export class DatetimepickComponent implements OnInit {
   document.getElementsByName("txtDate")[0].setAttribute('max', someDate.toISOString().split('T')[0]);
   }
   onSubmit(){
+    console.log("hi"+this.sharedService.appointment.date);
     this.appointmentservice.find(this.sharedService.appointment).subscribe(data=>{
       if(data){
         alert("this slot is already booked select some other slot");
@@ -67,6 +68,7 @@ export class DatetimepickComponent implements OnInit {
     else{
       console.log(this.sharedService.appointment.date);
       console.log(this.sharedService.appointment.slot);
+      console.log(sessionStorage.getItem("LoggedInUser"))
       this.sharedService.appointment.patient_id=sessionStorage.getItem("LoggedInUser")
       this.sharedService.appointment.isfeepaid=false;
   
@@ -81,6 +83,7 @@ export class DatetimepickComponent implements OnInit {
   onlinesave(){
     
     this.router.navigate(['payment'])
+    
   }
 
 }

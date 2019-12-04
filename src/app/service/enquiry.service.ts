@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class EnquiryService {
 
   private baseUrl ='http://localhost:1234/api/enquirys';
+  private feedbackUrl ='http://localhost:1234/api/feedbacks';
 
   constructor(private http: HttpClient) { }
 
@@ -17,6 +18,10 @@ export class EnquiryService {
 
   createEnquiry(enquiry: Object): Observable<Object> {
     return this.http.post(`${this.baseUrl}`, enquiry);
+  }
+
+  createFeedback(feedbacks: Object): Observable<Object> {
+    return this.http.post(`${this.feedbackUrl}`, feedbacks);
   }
 
   updateEnquiry(id: number, value: any): Observable<Object> {

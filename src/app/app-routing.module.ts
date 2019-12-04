@@ -96,7 +96,7 @@ const routes: Routes = [
   {
     path:'payment',
     component:PaymentComponent,
-    data: {  showHeader: false ,show:false,showFooter:false } , canActivate:[AuthGuard]
+    data: {  showHeader: false ,show:false } , canActivate:[AuthGuard]
   },
   {
     path:'shownav',

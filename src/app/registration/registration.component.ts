@@ -68,6 +68,7 @@ export class RegistrationComponent implements OnInit {
      //  this.userService.save(this.sharedService.user).subscribe();
        }
        console.log(this.registerForm.value);
+       console.log("date "+this.sharedService.user.dateofbirth);
    
        // display form values on success
       // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
